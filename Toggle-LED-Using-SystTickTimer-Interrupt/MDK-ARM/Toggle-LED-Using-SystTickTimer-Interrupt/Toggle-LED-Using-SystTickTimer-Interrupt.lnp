@@ -1,0 +1,25 @@
+--cpu=Cortex-M4.fp
+"toggle-led-using-systticktimer-interrupt\startup_stm32f401xe.o"
+"toggle-led-using-systticktimer-interrupt\main.o"
+"toggle-led-using-systticktimer-interrupt\stm32f4xx_it.o"
+"toggle-led-using-systticktimer-interrupt\stm32f4xx_hal_msp.o"
+"toggle-led-using-systticktimer-interrupt\stm32f4xx_hal_tim.o"
+"toggle-led-using-systticktimer-interrupt\stm32f4xx_hal_tim_ex.o"
+"toggle-led-using-systticktimer-interrupt\stm32f4xx_hal_rcc.o"
+"toggle-led-using-systticktimer-interrupt\stm32f4xx_hal_rcc_ex.o"
+"toggle-led-using-systticktimer-interrupt\stm32f4xx_hal_flash.o"
+"toggle-led-using-systticktimer-interrupt\stm32f4xx_hal_flash_ex.o"
+"toggle-led-using-systticktimer-interrupt\stm32f4xx_hal_flash_ramfunc.o"
+"toggle-led-using-systticktimer-interrupt\stm32f4xx_hal_gpio.o"
+"toggle-led-using-systticktimer-interrupt\stm32f4xx_hal_dma_ex.o"
+"toggle-led-using-systticktimer-interrupt\stm32f4xx_hal_dma.o"
+"toggle-led-using-systticktimer-interrupt\stm32f4xx_hal_pwr.o"
+"toggle-led-using-systticktimer-interrupt\stm32f4xx_hal_pwr_ex.o"
+"toggle-led-using-systticktimer-interrupt\stm32f4xx_hal_cortex.o"
+"toggle-led-using-systticktimer-interrupt\stm32f4xx_hal.o"
+"toggle-led-using-systticktimer-interrupt\stm32f4xx_hal_exti.o"
+"toggle-led-using-systticktimer-interrupt\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "Toggle-LED-Using-SystTickTimer-Interrupt\Toggle-LED-Using-SystTickTimer-Interrupt.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Toggle-LED-Using-SystTickTimer-Interrupt.map" -o Toggle-LED-Using-SystTickTimer-Interrupt\Toggle-LED-Using-SystTickTimer-Interrupt.axf
