@@ -1,0 +1,25 @@
+--cpu=Cortex-M4.fp
+"led-external-interrupt\startup_stm32f401xe.o"
+"led-external-interrupt\main.o"
+"led-external-interrupt\stm32f4xx_it.o"
+"led-external-interrupt\stm32f4xx_hal_msp.o"
+"led-external-interrupt\stm32f4xx_hal_tim.o"
+"led-external-interrupt\stm32f4xx_hal_tim_ex.o"
+"led-external-interrupt\stm32f4xx_hal_rcc.o"
+"led-external-interrupt\stm32f4xx_hal_rcc_ex.o"
+"led-external-interrupt\stm32f4xx_hal_flash.o"
+"led-external-interrupt\stm32f4xx_hal_flash_ex.o"
+"led-external-interrupt\stm32f4xx_hal_flash_ramfunc.o"
+"led-external-interrupt\stm32f4xx_hal_gpio.o"
+"led-external-interrupt\stm32f4xx_hal_dma_ex.o"
+"led-external-interrupt\stm32f4xx_hal_dma.o"
+"led-external-interrupt\stm32f4xx_hal_pwr.o"
+"led-external-interrupt\stm32f4xx_hal_pwr_ex.o"
+"led-external-interrupt\stm32f4xx_hal_cortex.o"
+"led-external-interrupt\stm32f4xx_hal.o"
+"led-external-interrupt\stm32f4xx_hal_exti.o"
+"led-external-interrupt\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "LED-External-Interrupt\LED-External-Interrupt.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "LED-External-Interrupt.map" -o LED-External-Interrupt\LED-External-Interrupt.axf
