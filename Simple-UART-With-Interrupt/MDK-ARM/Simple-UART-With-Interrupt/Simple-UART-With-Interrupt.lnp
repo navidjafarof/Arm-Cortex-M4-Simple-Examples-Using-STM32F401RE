@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp
+"simple-uart-with-interrupt\startup_stm32f401xe.o"
+"simple-uart-with-interrupt\main.o"
+"simple-uart-with-interrupt\stm32f4xx_it.o"
+"simple-uart-with-interrupt\stm32f4xx_hal_msp.o"
+"simple-uart-with-interrupt\stm32f4xx_hal_tim.o"
+"simple-uart-with-interrupt\stm32f4xx_hal_tim_ex.o"
+"simple-uart-with-interrupt\stm32f4xx_hal_uart.o"
+"simple-uart-with-interrupt\stm32f4xx_hal_rcc.o"
+"simple-uart-with-interrupt\stm32f4xx_hal_rcc_ex.o"
+"simple-uart-with-interrupt\stm32f4xx_hal_flash.o"
+"simple-uart-with-interrupt\stm32f4xx_hal_flash_ex.o"
+"simple-uart-with-interrupt\stm32f4xx_hal_flash_ramfunc.o"
+"simple-uart-with-interrupt\stm32f4xx_hal_gpio.o"
+"simple-uart-with-interrupt\stm32f4xx_hal_dma_ex.o"
+"simple-uart-with-interrupt\stm32f4xx_hal_dma.o"
+"simple-uart-with-interrupt\stm32f4xx_hal_pwr.o"
+"simple-uart-with-interrupt\stm32f4xx_hal_pwr_ex.o"
+"simple-uart-with-interrupt\stm32f4xx_hal_cortex.o"
+"simple-uart-with-interrupt\stm32f4xx_hal.o"
+"simple-uart-with-interrupt\stm32f4xx_hal_exti.o"
+"simple-uart-with-interrupt\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "Simple-UART-With-Interrupt\Simple-UART-With-Interrupt.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Simple-UART-With-Interrupt.map" -o Simple-UART-With-Interrupt\Simple-UART-With-Interrupt.axf
