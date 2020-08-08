@@ -1,0 +1,27 @@
+--cpu=Cortex-M4.fp
+"tempreture-sensor-adc-timer-lcd\startup_stm32f401xe.o"
+"tempreture-sensor-adc-timer-lcd\main.o"
+"tempreture-sensor-adc-timer-lcd\stm32f4xx_it.o"
+"tempreture-sensor-adc-timer-lcd\stm32f4xx_hal_msp.o"
+"tempreture-sensor-adc-timer-lcd\stm32f4xx_hal_adc.o"
+"tempreture-sensor-adc-timer-lcd\stm32f4xx_hal_adc_ex.o"
+"tempreture-sensor-adc-timer-lcd\stm32f4xx_hal_rcc.o"
+"tempreture-sensor-adc-timer-lcd\stm32f4xx_hal_rcc_ex.o"
+"tempreture-sensor-adc-timer-lcd\stm32f4xx_hal_flash.o"
+"tempreture-sensor-adc-timer-lcd\stm32f4xx_hal_flash_ex.o"
+"tempreture-sensor-adc-timer-lcd\stm32f4xx_hal_flash_ramfunc.o"
+"tempreture-sensor-adc-timer-lcd\stm32f4xx_hal_gpio.o"
+"tempreture-sensor-adc-timer-lcd\stm32f4xx_hal_dma_ex.o"
+"tempreture-sensor-adc-timer-lcd\stm32f4xx_hal_dma.o"
+"tempreture-sensor-adc-timer-lcd\stm32f4xx_hal_pwr.o"
+"tempreture-sensor-adc-timer-lcd\stm32f4xx_hal_pwr_ex.o"
+"tempreture-sensor-adc-timer-lcd\stm32f4xx_hal_cortex.o"
+"tempreture-sensor-adc-timer-lcd\stm32f4xx_hal.o"
+"tempreture-sensor-adc-timer-lcd\stm32f4xx_hal_exti.o"
+"tempreture-sensor-adc-timer-lcd\stm32f4xx_hal_tim.o"
+"tempreture-sensor-adc-timer-lcd\stm32f4xx_hal_tim_ex.o"
+"tempreture-sensor-adc-timer-lcd\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "Tempreture-Sensor-ADC-Timer-LCD\Tempreture-Sensor-ADC-Timer-LCD.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Tempreture-Sensor-ADC-Timer-LCD.map" -o Tempreture-Sensor-ADC-Timer-LCD\Tempreture-Sensor-ADC-Timer-LCD.axf
