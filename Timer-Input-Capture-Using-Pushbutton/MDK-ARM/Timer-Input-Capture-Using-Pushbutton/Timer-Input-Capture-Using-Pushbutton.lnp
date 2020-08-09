@@ -1,0 +1,25 @@
+--cpu=Cortex-M4.fp
+"timer-input-capture-using-pushbutton\startup_stm32f401xe.o"
+"timer-input-capture-using-pushbutton\main.o"
+"timer-input-capture-using-pushbutton\stm32f4xx_it.o"
+"timer-input-capture-using-pushbutton\stm32f4xx_hal_msp.o"
+"timer-input-capture-using-pushbutton\stm32f4xx_hal_tim.o"
+"timer-input-capture-using-pushbutton\stm32f4xx_hal_tim_ex.o"
+"timer-input-capture-using-pushbutton\stm32f4xx_hal_rcc.o"
+"timer-input-capture-using-pushbutton\stm32f4xx_hal_rcc_ex.o"
+"timer-input-capture-using-pushbutton\stm32f4xx_hal_flash.o"
+"timer-input-capture-using-pushbutton\stm32f4xx_hal_flash_ex.o"
+"timer-input-capture-using-pushbutton\stm32f4xx_hal_flash_ramfunc.o"
+"timer-input-capture-using-pushbutton\stm32f4xx_hal_gpio.o"
+"timer-input-capture-using-pushbutton\stm32f4xx_hal_dma_ex.o"
+"timer-input-capture-using-pushbutton\stm32f4xx_hal_dma.o"
+"timer-input-capture-using-pushbutton\stm32f4xx_hal_pwr.o"
+"timer-input-capture-using-pushbutton\stm32f4xx_hal_pwr_ex.o"
+"timer-input-capture-using-pushbutton\stm32f4xx_hal_cortex.o"
+"timer-input-capture-using-pushbutton\stm32f4xx_hal.o"
+"timer-input-capture-using-pushbutton\stm32f4xx_hal_exti.o"
+"timer-input-capture-using-pushbutton\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "Timer-Input-Capture-Using-Pushbutton\Timer-Input-Capture-Using-Pushbutton.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Timer-Input-Capture-Using-Pushbutton.map" -o Timer-Input-Capture-Using-Pushbutton\Timer-Input-Capture-Using-Pushbutton.axf

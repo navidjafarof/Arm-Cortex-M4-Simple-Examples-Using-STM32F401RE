@@ -49,7 +49,6 @@ TIM_HandleTypeDef htim2;
 
 /* USER CODE BEGIN PV */
 char result[3];
-uint8_t write_flag = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
