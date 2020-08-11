@@ -1,0 +1,25 @@
+--cpu=Cortex-M4.fp
+"dc-motor-using-pwm\startup_stm32f401xe.o"
+"dc-motor-using-pwm\main.o"
+"dc-motor-using-pwm\stm32f4xx_it.o"
+"dc-motor-using-pwm\stm32f4xx_hal_msp.o"
+"dc-motor-using-pwm\stm32f4xx_hal_tim.o"
+"dc-motor-using-pwm\stm32f4xx_hal_tim_ex.o"
+"dc-motor-using-pwm\stm32f4xx_hal_rcc.o"
+"dc-motor-using-pwm\stm32f4xx_hal_rcc_ex.o"
+"dc-motor-using-pwm\stm32f4xx_hal_flash.o"
+"dc-motor-using-pwm\stm32f4xx_hal_flash_ex.o"
+"dc-motor-using-pwm\stm32f4xx_hal_flash_ramfunc.o"
+"dc-motor-using-pwm\stm32f4xx_hal_gpio.o"
+"dc-motor-using-pwm\stm32f4xx_hal_dma_ex.o"
+"dc-motor-using-pwm\stm32f4xx_hal_dma.o"
+"dc-motor-using-pwm\stm32f4xx_hal_pwr.o"
+"dc-motor-using-pwm\stm32f4xx_hal_pwr_ex.o"
+"dc-motor-using-pwm\stm32f4xx_hal_cortex.o"
+"dc-motor-using-pwm\stm32f4xx_hal.o"
+"dc-motor-using-pwm\stm32f4xx_hal_exti.o"
+"dc-motor-using-pwm\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "DC-Motor-Using-PWM\DC-Motor-Using-PWM.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "DC-Motor-Using-PWM.map" -o DC-Motor-Using-PWM\DC-Motor-Using-PWM.axf

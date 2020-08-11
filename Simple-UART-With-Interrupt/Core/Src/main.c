@@ -89,7 +89,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+	HAL_UART_Receive_IT(&huart1, buffer, sizeof(buffer));
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -97,7 +97,6 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-		HAL_UART_Receive_IT(&huart1, buffer, sizeof(buffer));
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -192,6 +191,7 @@ static void MX_GPIO_Init(void)
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
 	HAL_UART_Transmit(huart, buffer, sizeof(buffer), HAL_MAX_DELAY);
+	HAL_UART_Receive_IT(&huart1, buffer, sizeof(buffer));
 }
 /* USER CODE END 4 */
 
