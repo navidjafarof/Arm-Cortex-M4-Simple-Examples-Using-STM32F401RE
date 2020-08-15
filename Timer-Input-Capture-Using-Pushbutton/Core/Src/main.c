@@ -104,8 +104,7 @@ int main(void)
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
 	LCD_init();
-  LCD_command(0x0E);
-  LCD_command(0x0C);
+  
 	HAL_TIM_Base_Start_IT(&htim3);
 	HAL_TIM_IC_Start_IT(&htim3, TIM_CHANNEL_1);
   /* USER CODE END 2 */
@@ -311,6 +310,8 @@ void LCD_init(void)
   LCD_command(0x06); /* move cursor right after each char */
   LCD_command(0x01); /* clear screen, move cursor to home */
   LCD_command(0x0F); /* turn on display, cursor blinking */
+	LCD_command(0x0E);
+  LCD_command(0x0C);
 }
 
 void LCD_command(unsigned char command)

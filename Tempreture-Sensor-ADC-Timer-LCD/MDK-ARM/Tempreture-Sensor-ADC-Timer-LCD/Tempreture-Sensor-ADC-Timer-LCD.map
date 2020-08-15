@@ -57,7 +57,6 @@ Section Cross References
     main.o(i.main) refers to main.o(i.MX_ADC1_Init) for MX_ADC1_Init
     main.o(i.main) refers to main.o(i.MX_TIM2_Init) for MX_TIM2_Init
     main.o(i.main) refers to main.o(i.LCD_init) for LCD_init
-    main.o(i.main) refers to main.o(i.LCD_command) for LCD_command
     main.o(i.main) refers to stm32f4xx_hal_tim.o(i.HAL_TIM_Base_Start) for HAL_TIM_Base_Start
     main.o(i.main) refers to stm32f4xx_hal_adc.o(i.HAL_ADC_Start_IT) for HAL_ADC_Start_IT
     main.o(i.main) refers to main.o(.bss) for .bss
@@ -1206,47 +1205,47 @@ Image Symbol Table
     i.LCD_command                            0x08001730   Section        0  main.o(i.LCD_command)
     i.LCD_data                               0x08001788   Section        0  main.o(i.LCD_data)
     i.LCD_init                               0x080017d8   Section        0  main.o(i.LCD_init)
-    i.LCD_puts                               0x0800181a   Section        0  main.o(i.LCD_puts)
-    i.MX_ADC1_Init                           0x08001834   Section        0  main.o(i.MX_ADC1_Init)
-    MX_ADC1_Init                             0x08001835   Thumb Code    74  main.o(i.MX_ADC1_Init)
-    i.MX_GPIO_Init                           0x08001888   Section        0  main.o(i.MX_GPIO_Init)
-    MX_GPIO_Init                             0x08001889   Thumb Code   114  main.o(i.MX_GPIO_Init)
-    i.MX_TIM2_Init                           0x08001908   Section        0  main.o(i.MX_TIM2_Init)
-    MX_TIM2_Init                             0x08001909   Thumb Code    80  main.o(i.MX_TIM2_Init)
-    i.MemManage_Handler                      0x0800195c   Section        0  stm32f4xx_it.o(i.MemManage_Handler)
-    i.NMI_Handler                            0x0800195e   Section        0  stm32f4xx_it.o(i.NMI_Handler)
-    i.PendSV_Handler                         0x08001960   Section        0  stm32f4xx_it.o(i.PendSV_Handler)
-    i.SVC_Handler                            0x08001962   Section        0  stm32f4xx_it.o(i.SVC_Handler)
-    i.SysTick_Handler                        0x08001964   Section        0  stm32f4xx_it.o(i.SysTick_Handler)
-    i.SystemClock_Config                     0x08001968   Section        0  main.o(i.SystemClock_Config)
-    i.SystemInit                             0x080019dc   Section        0  system_stm32f4xx.o(i.SystemInit)
-    i.TIM_Base_SetConfig                     0x080019f8   Section        0  stm32f4xx_hal_tim.o(i.TIM_Base_SetConfig)
-    i.TIM_ETR_SetConfig                      0x08001a90   Section        0  stm32f4xx_hal_tim.o(i.TIM_ETR_SetConfig)
-    i.TIM_ITRx_SetConfig                     0x08001aa4   Section        0  stm32f4xx_hal_tim.o(i.TIM_ITRx_SetConfig)
-    TIM_ITRx_SetConfig                       0x08001aa5   Thumb Code    16  stm32f4xx_hal_tim.o(i.TIM_ITRx_SetConfig)
-    i.TIM_TI1_ConfigInputStage               0x08001ab4   Section        0  stm32f4xx_hal_tim.o(i.TIM_TI1_ConfigInputStage)
-    TIM_TI1_ConfigInputStage                 0x08001ab5   Thumb Code    34  stm32f4xx_hal_tim.o(i.TIM_TI1_ConfigInputStage)
-    i.TIM_TI2_ConfigInputStage               0x08001ad6   Section        0  stm32f4xx_hal_tim.o(i.TIM_TI2_ConfigInputStage)
-    TIM_TI2_ConfigInputStage                 0x08001ad7   Thumb Code    36  stm32f4xx_hal_tim.o(i.TIM_TI2_ConfigInputStage)
-    i.UsageFault_Handler                     0x08001afa   Section        0  stm32f4xx_it.o(i.UsageFault_Handler)
-    i.__0sprintf                             0x08001afc   Section        0  printfa.o(i.__0sprintf)
-    i.__NVIC_SetPriority                     0x08001b24   Section        0  stm32f4xx_hal_cortex.o(i.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x08001b25   Thumb Code    32  stm32f4xx_hal_cortex.o(i.__NVIC_SetPriority)
-    i.__scatterload_copy                     0x08001b44   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x08001b52   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08001b54   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i._fp_digits                             0x08001b64   Section        0  printfa.o(i._fp_digits)
-    _fp_digits                               0x08001b65   Thumb Code   366  printfa.o(i._fp_digits)
-    i._printf_core                           0x08001ce8   Section        0  printfa.o(i._printf_core)
-    _printf_core                             0x08001ce9   Thumb Code  1744  printfa.o(i._printf_core)
-    i._printf_post_padding                   0x080023c4   Section        0  printfa.o(i._printf_post_padding)
-    _printf_post_padding                     0x080023c5   Thumb Code    36  printfa.o(i._printf_post_padding)
-    i._printf_pre_padding                    0x080023e8   Section        0  printfa.o(i._printf_pre_padding)
-    _printf_pre_padding                      0x080023e9   Thumb Code    46  printfa.o(i._printf_pre_padding)
-    i._sputc                                 0x08002416   Section        0  printfa.o(i._sputc)
-    _sputc                                   0x08002417   Thumb Code    10  printfa.o(i._sputc)
-    i.delayMs                                0x08002420   Section        0  main.o(i.delayMs)
-    i.main                                   0x08002438   Section        0  main.o(i.main)
+    i.LCD_puts                               0x08001826   Section        0  main.o(i.LCD_puts)
+    i.MX_ADC1_Init                           0x08001840   Section        0  main.o(i.MX_ADC1_Init)
+    MX_ADC1_Init                             0x08001841   Thumb Code    74  main.o(i.MX_ADC1_Init)
+    i.MX_GPIO_Init                           0x08001894   Section        0  main.o(i.MX_GPIO_Init)
+    MX_GPIO_Init                             0x08001895   Thumb Code   114  main.o(i.MX_GPIO_Init)
+    i.MX_TIM2_Init                           0x08001914   Section        0  main.o(i.MX_TIM2_Init)
+    MX_TIM2_Init                             0x08001915   Thumb Code    80  main.o(i.MX_TIM2_Init)
+    i.MemManage_Handler                      0x08001968   Section        0  stm32f4xx_it.o(i.MemManage_Handler)
+    i.NMI_Handler                            0x0800196a   Section        0  stm32f4xx_it.o(i.NMI_Handler)
+    i.PendSV_Handler                         0x0800196c   Section        0  stm32f4xx_it.o(i.PendSV_Handler)
+    i.SVC_Handler                            0x0800196e   Section        0  stm32f4xx_it.o(i.SVC_Handler)
+    i.SysTick_Handler                        0x08001970   Section        0  stm32f4xx_it.o(i.SysTick_Handler)
+    i.SystemClock_Config                     0x08001974   Section        0  main.o(i.SystemClock_Config)
+    i.SystemInit                             0x080019e8   Section        0  system_stm32f4xx.o(i.SystemInit)
+    i.TIM_Base_SetConfig                     0x08001a04   Section        0  stm32f4xx_hal_tim.o(i.TIM_Base_SetConfig)
+    i.TIM_ETR_SetConfig                      0x08001a9c   Section        0  stm32f4xx_hal_tim.o(i.TIM_ETR_SetConfig)
+    i.TIM_ITRx_SetConfig                     0x08001ab0   Section        0  stm32f4xx_hal_tim.o(i.TIM_ITRx_SetConfig)
+    TIM_ITRx_SetConfig                       0x08001ab1   Thumb Code    16  stm32f4xx_hal_tim.o(i.TIM_ITRx_SetConfig)
+    i.TIM_TI1_ConfigInputStage               0x08001ac0   Section        0  stm32f4xx_hal_tim.o(i.TIM_TI1_ConfigInputStage)
+    TIM_TI1_ConfigInputStage                 0x08001ac1   Thumb Code    34  stm32f4xx_hal_tim.o(i.TIM_TI1_ConfigInputStage)
+    i.TIM_TI2_ConfigInputStage               0x08001ae2   Section        0  stm32f4xx_hal_tim.o(i.TIM_TI2_ConfigInputStage)
+    TIM_TI2_ConfigInputStage                 0x08001ae3   Thumb Code    36  stm32f4xx_hal_tim.o(i.TIM_TI2_ConfigInputStage)
+    i.UsageFault_Handler                     0x08001b06   Section        0  stm32f4xx_it.o(i.UsageFault_Handler)
+    i.__0sprintf                             0x08001b08   Section        0  printfa.o(i.__0sprintf)
+    i.__NVIC_SetPriority                     0x08001b30   Section        0  stm32f4xx_hal_cortex.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x08001b31   Thumb Code    32  stm32f4xx_hal_cortex.o(i.__NVIC_SetPriority)
+    i.__scatterload_copy                     0x08001b50   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08001b5e   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08001b60   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i._fp_digits                             0x08001b70   Section        0  printfa.o(i._fp_digits)
+    _fp_digits                               0x08001b71   Thumb Code   366  printfa.o(i._fp_digits)
+    i._printf_core                           0x08001cf4   Section        0  printfa.o(i._printf_core)
+    _printf_core                             0x08001cf5   Thumb Code  1744  printfa.o(i._printf_core)
+    i._printf_post_padding                   0x080023d0   Section        0  printfa.o(i._printf_post_padding)
+    _printf_post_padding                     0x080023d1   Thumb Code    36  printfa.o(i._printf_post_padding)
+    i._printf_pre_padding                    0x080023f4   Section        0  printfa.o(i._printf_pre_padding)
+    _printf_pre_padding                      0x080023f5   Thumb Code    46  printfa.o(i._printf_pre_padding)
+    i._sputc                                 0x08002422   Section        0  printfa.o(i._sputc)
+    _sputc                                   0x08002423   Thumb Code    10  printfa.o(i._sputc)
+    i.delayMs                                0x0800242c   Section        0  main.o(i.delayMs)
+    i.main                                   0x08002444   Section        0  main.o(i.main)
     .constdata                               0x08002470   Section       16  system_stm32f4xx.o(.constdata)
     .data                                    0x20000000   Section        3  main.o(.data)
     .data                                    0x20000004   Section       12  stm32f4xx_hal.o(.data)
@@ -1439,28 +1438,28 @@ Image Symbol Table
     HardFault_Handler                        0x0800172f   Thumb Code     2  stm32f4xx_it.o(i.HardFault_Handler)
     LCD_command                              0x08001731   Thumb Code    78  main.o(i.LCD_command)
     LCD_data                                 0x08001789   Thumb Code    70  main.o(i.LCD_data)
-    LCD_init                                 0x080017d9   Thumb Code    66  main.o(i.LCD_init)
-    LCD_puts                                 0x0800181b   Thumb Code    24  main.o(i.LCD_puts)
-    MemManage_Handler                        0x0800195d   Thumb Code     2  stm32f4xx_it.o(i.MemManage_Handler)
-    NMI_Handler                              0x0800195f   Thumb Code     2  stm32f4xx_it.o(i.NMI_Handler)
-    PendSV_Handler                           0x08001961   Thumb Code     2  stm32f4xx_it.o(i.PendSV_Handler)
-    SVC_Handler                              0x08001963   Thumb Code     2  stm32f4xx_it.o(i.SVC_Handler)
-    SysTick_Handler                          0x08001965   Thumb Code     4  stm32f4xx_it.o(i.SysTick_Handler)
-    SystemClock_Config                       0x08001969   Thumb Code   106  main.o(i.SystemClock_Config)
-    SystemInit                               0x080019dd   Thumb Code    22  system_stm32f4xx.o(i.SystemInit)
-    TIM_Base_SetConfig                       0x080019f9   Thumb Code   122  stm32f4xx_hal_tim.o(i.TIM_Base_SetConfig)
-    TIM_ETR_SetConfig                        0x08001a91   Thumb Code    20  stm32f4xx_hal_tim.o(i.TIM_ETR_SetConfig)
-    UsageFault_Handler                       0x08001afb   Thumb Code     2  stm32f4xx_it.o(i.UsageFault_Handler)
-    __0sprintf                               0x08001afd   Thumb Code    34  printfa.o(i.__0sprintf)
-    __1sprintf                               0x08001afd   Thumb Code     0  printfa.o(i.__0sprintf)
-    __2sprintf                               0x08001afd   Thumb Code     0  printfa.o(i.__0sprintf)
-    __c89sprintf                             0x08001afd   Thumb Code     0  printfa.o(i.__0sprintf)
-    sprintf                                  0x08001afd   Thumb Code     0  printfa.o(i.__0sprintf)
-    __scatterload_copy                       0x08001b45   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x08001b53   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08001b55   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    delayMs                                  0x08002421   Thumb Code    24  main.o(i.delayMs)
-    main                                     0x08002439   Thumb Code    52  main.o(i.main)
+    LCD_init                                 0x080017d9   Thumb Code    78  main.o(i.LCD_init)
+    LCD_puts                                 0x08001827   Thumb Code    24  main.o(i.LCD_puts)
+    MemManage_Handler                        0x08001969   Thumb Code     2  stm32f4xx_it.o(i.MemManage_Handler)
+    NMI_Handler                              0x0800196b   Thumb Code     2  stm32f4xx_it.o(i.NMI_Handler)
+    PendSV_Handler                           0x0800196d   Thumb Code     2  stm32f4xx_it.o(i.PendSV_Handler)
+    SVC_Handler                              0x0800196f   Thumb Code     2  stm32f4xx_it.o(i.SVC_Handler)
+    SysTick_Handler                          0x08001971   Thumb Code     4  stm32f4xx_it.o(i.SysTick_Handler)
+    SystemClock_Config                       0x08001975   Thumb Code   106  main.o(i.SystemClock_Config)
+    SystemInit                               0x080019e9   Thumb Code    22  system_stm32f4xx.o(i.SystemInit)
+    TIM_Base_SetConfig                       0x08001a05   Thumb Code   122  stm32f4xx_hal_tim.o(i.TIM_Base_SetConfig)
+    TIM_ETR_SetConfig                        0x08001a9d   Thumb Code    20  stm32f4xx_hal_tim.o(i.TIM_ETR_SetConfig)
+    UsageFault_Handler                       0x08001b07   Thumb Code     2  stm32f4xx_it.o(i.UsageFault_Handler)
+    __0sprintf                               0x08001b09   Thumb Code    34  printfa.o(i.__0sprintf)
+    __1sprintf                               0x08001b09   Thumb Code     0  printfa.o(i.__0sprintf)
+    __2sprintf                               0x08001b09   Thumb Code     0  printfa.o(i.__0sprintf)
+    __c89sprintf                             0x08001b09   Thumb Code     0  printfa.o(i.__0sprintf)
+    sprintf                                  0x08001b09   Thumb Code     0  printfa.o(i.__0sprintf)
+    __scatterload_copy                       0x08001b51   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08001b5f   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08001b61   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    delayMs                                  0x0800242d   Thumb Code    24  main.o(i.delayMs)
+    main                                     0x08002445   Thumb Code    40  main.o(i.main)
     AHBPrescTable                            0x08002470   Data          16  system_stm32f4xx.o(.constdata)
     Region$$Table$$Base                      0x08002480   Number         0  anon$$obj.o(Region$$Table)
     Region$$Table$$Limit                     0x080024a0   Number         0  anon$$obj.o(Region$$Table)
@@ -1555,38 +1554,38 @@ Memory Map of the image
     0x0800172e   0x0800172e   0x00000002   Code   RO          211    i.HardFault_Handler  stm32f4xx_it.o
     0x08001730   0x08001730   0x00000058   Code   RO           16    i.LCD_command       main.o
     0x08001788   0x08001788   0x00000050   Code   RO           17    i.LCD_data          main.o
-    0x080017d8   0x080017d8   0x00000042   Code   RO           18    i.LCD_init          main.o
-    0x0800181a   0x0800181a   0x00000018   Code   RO           19    i.LCD_puts          main.o
-    0x08001832   0x08001832   0x00000002   PAD
-    0x08001834   0x08001834   0x00000054   Code   RO           20    i.MX_ADC1_Init      main.o
-    0x08001888   0x08001888   0x00000080   Code   RO           21    i.MX_GPIO_Init      main.o
-    0x08001908   0x08001908   0x00000054   Code   RO           22    i.MX_TIM2_Init      main.o
-    0x0800195c   0x0800195c   0x00000002   Code   RO          212    i.MemManage_Handler  stm32f4xx_it.o
-    0x0800195e   0x0800195e   0x00000002   Code   RO          213    i.NMI_Handler       stm32f4xx_it.o
-    0x08001960   0x08001960   0x00000002   Code   RO          214    i.PendSV_Handler    stm32f4xx_it.o
-    0x08001962   0x08001962   0x00000002   Code   RO          215    i.SVC_Handler       stm32f4xx_it.o
-    0x08001964   0x08001964   0x00000004   Code   RO          216    i.SysTick_Handler   stm32f4xx_it.o
-    0x08001968   0x08001968   0x00000074   Code   RO           23    i.SystemClock_Config  main.o
-    0x080019dc   0x080019dc   0x0000001c   Code   RO         2722    i.SystemInit        system_stm32f4xx.o
-    0x080019f8   0x080019f8   0x00000098   Code   RO         1883    i.TIM_Base_SetConfig  stm32f4xx_hal_tim.o
-    0x08001a90   0x08001a90   0x00000014   Code   RO         1894    i.TIM_ETR_SetConfig  stm32f4xx_hal_tim.o
-    0x08001aa4   0x08001aa4   0x00000010   Code   RO         1895    i.TIM_ITRx_SetConfig  stm32f4xx_hal_tim.o
-    0x08001ab4   0x08001ab4   0x00000022   Code   RO         1901    i.TIM_TI1_ConfigInputStage  stm32f4xx_hal_tim.o
-    0x08001ad6   0x08001ad6   0x00000024   Code   RO         1903    i.TIM_TI2_ConfigInputStage  stm32f4xx_hal_tim.o
-    0x08001afa   0x08001afa   0x00000002   Code   RO          217    i.UsageFault_Handler  stm32f4xx_it.o
-    0x08001afc   0x08001afc   0x00000028   Code   RO         2998    i.__0sprintf        mc_w.l(printfa.o)
-    0x08001b24   0x08001b24   0x00000020   Code   RO         1418    i.__NVIC_SetPriority  stm32f4xx_hal_cortex.o
-    0x08001b44   0x08001b44   0x0000000e   Code   RO         3070    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08001b52   0x08001b52   0x00000002   Code   RO         3071    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08001b54   0x08001b54   0x0000000e   Code   RO         3072    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08001b62   0x08001b62   0x00000002   PAD
-    0x08001b64   0x08001b64   0x00000184   Code   RO         3003    i._fp_digits        mc_w.l(printfa.o)
-    0x08001ce8   0x08001ce8   0x000006dc   Code   RO         3004    i._printf_core      mc_w.l(printfa.o)
-    0x080023c4   0x080023c4   0x00000024   Code   RO         3005    i._printf_post_padding  mc_w.l(printfa.o)
-    0x080023e8   0x080023e8   0x0000002e   Code   RO         3006    i._printf_pre_padding  mc_w.l(printfa.o)
-    0x08002416   0x08002416   0x0000000a   Code   RO         3008    i._sputc            mc_w.l(printfa.o)
-    0x08002420   0x08002420   0x00000018   Code   RO           24    i.delayMs           main.o
-    0x08002438   0x08002438   0x00000038   Code   RO           25    i.main              main.o
+    0x080017d8   0x080017d8   0x0000004e   Code   RO           18    i.LCD_init          main.o
+    0x08001826   0x08001826   0x00000018   Code   RO           19    i.LCD_puts          main.o
+    0x0800183e   0x0800183e   0x00000002   PAD
+    0x08001840   0x08001840   0x00000054   Code   RO           20    i.MX_ADC1_Init      main.o
+    0x08001894   0x08001894   0x00000080   Code   RO           21    i.MX_GPIO_Init      main.o
+    0x08001914   0x08001914   0x00000054   Code   RO           22    i.MX_TIM2_Init      main.o
+    0x08001968   0x08001968   0x00000002   Code   RO          212    i.MemManage_Handler  stm32f4xx_it.o
+    0x0800196a   0x0800196a   0x00000002   Code   RO          213    i.NMI_Handler       stm32f4xx_it.o
+    0x0800196c   0x0800196c   0x00000002   Code   RO          214    i.PendSV_Handler    stm32f4xx_it.o
+    0x0800196e   0x0800196e   0x00000002   Code   RO          215    i.SVC_Handler       stm32f4xx_it.o
+    0x08001970   0x08001970   0x00000004   Code   RO          216    i.SysTick_Handler   stm32f4xx_it.o
+    0x08001974   0x08001974   0x00000074   Code   RO           23    i.SystemClock_Config  main.o
+    0x080019e8   0x080019e8   0x0000001c   Code   RO         2722    i.SystemInit        system_stm32f4xx.o
+    0x08001a04   0x08001a04   0x00000098   Code   RO         1883    i.TIM_Base_SetConfig  stm32f4xx_hal_tim.o
+    0x08001a9c   0x08001a9c   0x00000014   Code   RO         1894    i.TIM_ETR_SetConfig  stm32f4xx_hal_tim.o
+    0x08001ab0   0x08001ab0   0x00000010   Code   RO         1895    i.TIM_ITRx_SetConfig  stm32f4xx_hal_tim.o
+    0x08001ac0   0x08001ac0   0x00000022   Code   RO         1901    i.TIM_TI1_ConfigInputStage  stm32f4xx_hal_tim.o
+    0x08001ae2   0x08001ae2   0x00000024   Code   RO         1903    i.TIM_TI2_ConfigInputStage  stm32f4xx_hal_tim.o
+    0x08001b06   0x08001b06   0x00000002   Code   RO          217    i.UsageFault_Handler  stm32f4xx_it.o
+    0x08001b08   0x08001b08   0x00000028   Code   RO         2998    i.__0sprintf        mc_w.l(printfa.o)
+    0x08001b30   0x08001b30   0x00000020   Code   RO         1418    i.__NVIC_SetPriority  stm32f4xx_hal_cortex.o
+    0x08001b50   0x08001b50   0x0000000e   Code   RO         3070    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08001b5e   0x08001b5e   0x00000002   Code   RO         3071    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08001b60   0x08001b60   0x0000000e   Code   RO         3072    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08001b6e   0x08001b6e   0x00000002   PAD
+    0x08001b70   0x08001b70   0x00000184   Code   RO         3003    i._fp_digits        mc_w.l(printfa.o)
+    0x08001cf4   0x08001cf4   0x000006dc   Code   RO         3004    i._printf_core      mc_w.l(printfa.o)
+    0x080023d0   0x080023d0   0x00000024   Code   RO         3005    i._printf_post_padding  mc_w.l(printfa.o)
+    0x080023f4   0x080023f4   0x0000002e   Code   RO         3006    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x08002422   0x08002422   0x0000000a   Code   RO         3008    i._sputc            mc_w.l(printfa.o)
+    0x0800242c   0x0800242c   0x00000018   Code   RO           24    i.delayMs           main.o
+    0x08002444   0x08002444   0x0000002c   Code   RO           25    i.main              main.o
     0x08002470   0x08002470   0x00000010   Data   RO         2723    .constdata          system_stm32f4xx.o
     0x08002480   0x08002480   0x00000020   Data   RO         3068    Region$$Table       anon$$obj.o
 

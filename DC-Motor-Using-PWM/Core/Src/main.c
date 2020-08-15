@@ -41,18 +41,20 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim3;
 
 /* USER CODE BEGIN PV */
-uint8_t mode = 0;
+uint8_t mode = 0, state = 1;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_TIM3_Init(void);
+static void MX_TIM2_Init(void);
 /* USER CODE BEGIN PFP */
-
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -89,6 +91,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_TIM3_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
 
@@ -142,6 +145,51 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief TIM2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM2_Init(void)
+{
+
+  /* USER CODE BEGIN TIM2_Init 0 */
+
+  /* USER CODE END TIM2_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM2_Init 1 */
+
+  /* USER CODE END TIM2_Init 1 */
+  htim2.Instance = TIM2;
+  htim2.Init.Prescaler = 16000;
+  htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim2.Init.Period = 20;
+  htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim2, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM2_Init 2 */
+
+  /* USER CODE END TIM2_Init 2 */
+
 }
 
 /**
@@ -231,25 +279,42 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-	HAL_NVIC_DisableIRQ(EXTI15_10_IRQn);
-		++mode;
-		mode = mode % 4;
-		switch(mode)
+	if(GPIO_Pin == GPIO_PIN_13 && state == 1){
+		HAL_TIM_Base_Start_IT(&htim2);
+		state = 0;
+	}
+	else{
+		__NOP();
+	}
+}
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	if(htim == &htim2)
+	{
+		if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == GPIO_PIN_RESET)
 		{
-			case 0:
-					__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 500);
-				break;
-			case 1:
-					__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 650);
-				break;
-			case 2:
-					__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 800);
-				break;
-			case 3:
-					__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 950);
-				break;
+			++mode;
+			mode = mode % 4;
+			switch(mode)
+			{
+				case 0:
+						__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 500);
+					break;
+				case 1:
+						__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 650);
+					break;
+				case 2:
+						__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 800);
+					break;
+				case 3:
+						__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 950);
+					break;
+			}
+			state = 1;
+			HAL_TIM_Base_Stop_IT(&htim2);
 		}
-		HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
+	}
 }
 /* USER CODE END 4 */
 

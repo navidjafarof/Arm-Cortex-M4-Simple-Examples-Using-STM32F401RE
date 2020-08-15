@@ -59,7 +59,6 @@ static void MX_TIM2_Init(void);
 /* USER CODE BEGIN PFP */
 void GPIO_Write_ODR(GPIO_TypeDef *GPIOx, uint16_t data);
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc);
-void write_result_on_LCD(void);
 void LCD_command(unsigned char command);
 void LCD_data(char data);
 void LCD_init(void);
@@ -104,8 +103,7 @@ int main(void)
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   LCD_init();
-  LCD_command(0x0E);
-  LCD_command(0x0C);
+  
   HAL_TIM_Base_Start(&htim2);
   HAL_ADC_Start_IT(&hadc1);
   /* USER CODE END 2 */
@@ -328,6 +326,8 @@ void LCD_init(void)
   LCD_command(0x06); /* move cursor right after each char */
   LCD_command(0x01); /* clear screen, move cursor to home */
   LCD_command(0x0F); /* turn on display, cursor blinking */
+	LCD_command(0x0E);
+  LCD_command(0x0C);
 }
 
 void LCD_command(unsigned char command)
